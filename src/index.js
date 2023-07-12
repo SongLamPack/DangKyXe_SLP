@@ -328,10 +328,16 @@ function render(listdata) {
   for (var i = 0; i < listdata.length; i++) {
     var data = listdata[i];
     if (data.ChonXeSD !== "") {
-      var XeCap = `<p style="color:blue; margin:8px">✅ Xe: ${data.ChonXeSD}</p>`;
+      var XeCap = `<p style="color:blue; margin:0; margin-top:8px">✅ Xe: ${data.ChonXeSD} 【${data.ChonLaiXe}】</p>`;
     } else {
-      XeCap = "";
+      var XeCap = "";
     }
+    if (data.GhiChu !== "") {
+      var GhiChu = `<p style="color:blue; margin:0; margin-bottom:8px">⚠️ ${data.GhiChu}</p>`;
+    } else {
+      var GhiChu = "";
+    }
+
     innerHtml += `<div id="formketqua" class="${
       data.KetQua === 1 ? "dcduyet" : data.KetQua === -1 ? "koduyet" : ""
     }">
@@ -346,6 +352,7 @@ function render(listdata) {
         : "ĐANG CHỜ"
     }</h2>
       ${XeCap}
+      ${GhiChu}
       <label>Người đăng ký:</label><br>
         <input type="text" style="width:133px" readonly value="Mã NV: ${
           data.MaNV
