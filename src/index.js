@@ -327,10 +327,6 @@ function render(listdata) {
   var innerHtml = "";
   for (var i = 0; i < listdata.length; i++) {
     var data = listdata[i];
-    data.TuNgay = new Date(data.TuNgay);
-    data.DenNgay = new Date(data.DenNgay);
-    data.TuGio = new Date(data.TuGio);
-    data.DenGio = new Date(data.DenGio);
     if (data.ChonXeSD !== "") {
       var XeCap = `<p style="color:blue; margin:8px">✅ Xe: ${data.ChonXeSD}</p>`;
     } else {
@@ -381,31 +377,23 @@ function render(listdata) {
     <div style="display:flex;padding-top:10px">
       <div style="text-align:right">
         <label>Từ ngày:</label>
-        <input type="text" style="width:90px" readonly value="${data.TuNgay.getDate()}/${data.TuNgay.getMonth()}/${data.TuNgay.getFullYear()}"></input>
+        <input type="text" style="width:90px" readonly value="${
+          data.TuNgay
+        }"></input>
         <br><label>Đến ngày:</label>
-        <input type="text" style="width:90px" readonly value="${data.DenNgay.getDate()}/${data.DenNgay.getMonth()}/${data.DenNgay.getFullYear()}"></input>
+        <input type="text" style="width:90px" readonly value="${
+          data.DenNgay
+        }"></input>
       </div>
       <div style="padding-left:15px;text-align:right">
         <label>Giờ đi:</label>
         <input type="text" style="width:50px" readonly value="${
-          data.TuGio.getHours() > 9
-            ? "" + data.TuGio.getHours()
-            : "0" + data.TuGio.getHours()
-        }:${
-      data.TuGio.getMinutes() > 9
-        ? "" + data.TuGio.getMinutes()
-        : "0" + data.TuGio.getMinutes()
-    }"></input>
+          data.TuGio
+        }"></input>
         <br><label>Giờ về:</label>
         <input type="text" style="width:50px" readonly value="${
-          data.DenGio.getHours() > 9
-            ? "" + data.DenGio.getHours()
-            : "0" + data.DenGio.getHours()
-        }:${
-      data.DenGio.getMinutes() > 9
-        ? "" + data.DenGio.getMinutes()
-        : "0" + data.DenGio.getMinutes()
-    }"></input>
+          data.DenGio
+        }"></input>
       </div>
     </div>
     <div style="padding-top:10px">
