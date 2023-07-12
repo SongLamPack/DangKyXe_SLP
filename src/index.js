@@ -458,7 +458,7 @@ function render(listdata) {
       }"></input>
     </div>
     <div style="display:flex;padding-top:0">
-      <input style="width:186px" type="text" readonly value="${
+      <input style="width:186px" type="text" readonly value="‣${
         data.Tudd
       }"></input>
       <input style="width:186px" type="text" readonly value="‣${
