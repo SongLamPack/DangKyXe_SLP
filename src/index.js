@@ -1,5 +1,5 @@
 const URL =
-  "https://script.google.com/macros/s/AKfycbx6ek0LquXhS3nUrmjDBkhReeaBfS5wvaAfSImkmc4ls2kXh5KtaI8VAcZT6FE60RZf/exec";
+  "https://script.google.com/macros/s/AKfycbxkFoW3rsj8unqfstgVOxfpUDIp1EjIVlv8izqxdLQiqPel9sQkmeFNCKd8eG087N70/exec";
 const urlquytrinh = "google.com.vn";
 const btmdangky = document.getElementById("btmguidk");
 const idnguoidk = document.getElementById("idngdk");
